@@ -1,4 +1,4 @@
-local playerName = game.Players.LocalPlayer.Name
+jlocal playerName = game.Players.LocalPlayer.Name
 if game.Players.LocalPlayer.PlayerGui:FindFirstChild("TestGui") then
     game.Players.LocalPlayer.PlayerGui.TestGui:Destroy()
 end
@@ -13,20 +13,20 @@ local gui = Instance.new("ScreenGui")
 gui.Name = "TestGui"
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 text1.Name = "RushDetectThingy"
-text1.Text = "No Rush"
+text1.Text = "Rush Chưa Xuất Hiện"
 text1.TextScaled = true
 text1.BackgroundColor3 = Color3.new(1, 1, 1)
 text1.Size = UDim2.new(0, 100, 0, 100)
 text1.Parent = game.Players.LocalPlayer.PlayerGui.TestGui
 text2.Name = "AmbushDetectThingy"
-text2.Text = "No Ambush"
+text2.Text = "Ambush Chưa Xuất Hiện"
 text2.TextScaled = true
 text2.BackgroundColor3 = Color3.new(1, 1, 1)
 text2.Size = UDim2.new(0, 100, 0, 100)
 text2.Position = UDim2.new(0, 0, 0, 100)
 text2.Parent = game.Players.LocalPlayer.PlayerGui.TestGui
 text3.Name = "SeekDistanceThingy"
-text3.Text = "No Seek"
+text3.Text = "Seek Đuổi Số Mét Nó Gần Bạn Là"
 text3.TextScaled = true
 text3.BackgroundColor3 = Color3.new(1, 1, 1)
 text3.Size = UDim2.new(0, 100, 0, 100)
@@ -257,8 +257,15 @@ while true do
         text2.Text = "No Ambush"
         text2.BackgroundColor3 = Color3.new(1, 1, 1)
     end
-    ToggleSeekChase = No Seek Chase
+    Local Seek = (
+    DisableSeek = Bool
+        for _,Object in pairs(workspace.CurrentRooms:GetDescendants()) do
+            if Object.Name == "Collision" then
+                ApplySettings(Object)
+            end
+        end
     end
+end)
     if game.Workspace.CurrentRooms:FindFirstChild("50") then
         if game.Workspace.CurrentRooms["50"]:FindFirstChild("FigureSetup") then
             if game.Workspace.CurrentRooms["50"].FigureSetup:FindFirstChild("FigureRagdoll") then
